@@ -1,0 +1,9 @@
+onclick='f1(this)'
+<button
+                onClick={(event, value) => {
+                  console.log(value);
+                }}
+                key={e}
+              >
+                {pageNumber - e}
+              </button>
