@@ -6,7 +6,7 @@ const Moviecard = ({ movieID, movieName, rating, posterUrl }) => {
   const navigate = useNavigate();
   const img = `https://image.tmdb.org/t/p/w500/${posterUrl}`;
   //const defaultSrc = (e) => {
-  const img2 = "../images/img.png";
+  // const img2 = "../images/img.png";
   //};
 
   return (
@@ -29,7 +29,11 @@ const Moviecard = ({ movieID, movieName, rating, posterUrl }) => {
         />
         <div className="containerz overflow-auto">
           <h4>
-            <b>{movieName}</b>
+            <div style={{ width: "max-content" }}>
+              <b>{movieName}</b>
+              <br></br>
+              <b>{rating}</b>
+            </div>
           </h4>
         </div>
       </div>

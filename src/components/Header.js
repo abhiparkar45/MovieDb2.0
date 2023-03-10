@@ -5,6 +5,12 @@ const Header = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      navigate(`/search/${search}`);
+    }
+  };
+
   return (
     <>
       <nav className="navbar fixed-top navbar-expand-lg navbar-custom navbar-dark ">
@@ -47,6 +53,7 @@ const Header = () => {
                 className="form-control me-2"
                 placeholder="Movie Name"
                 aria-label="Search"
+                onKeyDown={(e) => handleKeyDown(e)}
               />
               <button
                 className="btn btn-outline-success"

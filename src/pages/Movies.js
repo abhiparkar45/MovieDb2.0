@@ -23,6 +23,7 @@ const Movies = ({ SortBy }) => {
         pageNumber: pageNumber,
       })
     );
+    window.scrollTo(0, 0);
   }, [SortBy, pageNumber]);
 
   return (
